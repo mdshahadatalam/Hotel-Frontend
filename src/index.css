@@ -1,0 +1,603 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputFeild{
+ font-family: Arial, sans-serif;
+ height: 100vh;
+ margin: 0;
+ background-image: url(./assets//images/banner/banner1.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ 
+}
+
+.formSec{
+     display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.formSection{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    /* position: fixed; */
+    /* position: absolute; */
+    /* right:0; */
+    /* left: 0; */
+    
+}
+.formSection h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+.form-control {
+    margin-bottom: 15px;
+}
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.form-control input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+
+
+.crossIcon{
+    width: 32px;
+    height: 32px;
+    background-color: #e8e3e3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: whitesmoke; */
+    position: absolute;
+    right: 0;
+}
+
+.crossIcon:hover{
+    background-color: #d5d2d2;
+    rotate: 30deg;
+    transition: 7ms;
+}
+
+/* home section  */
+
+
+
+
+
+
+
+.hotel{
+font-weight: 700;
+font-size: 64px;
+color: #f47920;
+}
+
+.upTo{
+font-weight: 700;
+font-size: 64px;
+color: #fff;
+}
+.ON{
+font-weight: 400;
+font-size: 48px;
+color: #fff;
+}
+.booking{
+    background-color: #f47920; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    width: 154px;
+    height: 48px;
+}
+
+.booking:hover {
+    background-color: #ca661e;  
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  }
+
+.homeSec{
+    background-image: url(/src/assets/images/banner/banner1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* cheek section  */
+.cheek{
+    border: 0px solid #000;
+    border-radius: 5px;
+    box-shadow: 4px 0 12px 2px rgba(0, 0, 0, 0.15), 0 4px 12px 2px rgba(0, 0, 0, 0.15);
+    background: #0083ca;
+}
+
+.cheekBox{
+border: 0px solid #000;
+border-radius: 5px;
+height: 45px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+background: #fff;
+transition: all 0.3s ease;
+}
+.cheekBox:hover{
+    background-color: #cfd4d8;  
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);   
+}
+
+.bookingNow2{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #fff;
+border: 0px solid #000;
+border-radius: 5px;
+width: 170px;
+height: 45px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+background: #f47920;
+transition: all 0.3s ease;
+}
+.bookingNow2:hover{
+    background-color:  #ec7018;  
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);   
+}
+
+/* room section  */
+.OurRoom{
+font-weight: 400;
+font-size: 48px;
+line-height: 50%;
+letter-spacing: 0.03em;
+text-align: center;
+color: #0083ca;
+font-weight: 700;
+color: #f28e13;
+}
+.roomDami{
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+text-align: center;
+color: #333;
+}
+
+.roomBox{
+ width: 320px;
+border-radius: 5px;
+box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+background: linear-gradient(180deg, rgba(0, 131, 202, 0.2) 0%, rgba(0, 131, 202, 0.2) 100%);
+}
+
+.roomIcon{
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.roomImg:hover .roomIcon{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.family{
+font-weight: 900;
+font-size: 22px;
+color: #0083ca;
+}
+.roomBOxDami{
+font-weight: 300;
+font-size: 16px;
+line-height: 156%;
+color: #333;
+}
+
+
+ @media (max-width: 991.98px) { 
+    .roomRes{
+        flex-direction: row !important;
+    }
+    .roomSet{
+        width: 50% !important;
+    }
+    .roomSet img{
+        width: 100% !important;
+    }
+ }
+ 
+
+ @media (max-width: 767.98px) {
+
+    .manBox{
+        width: auto;
+    }
+
+    .roomBox{
+        width: auto;
+    }
+    .roomRes{
+        flex-direction: row !important;
+    }
+    .roomSet{
+        width: 50% !important;
+    }
+    .roomSet img{
+        width: 100% !important;
+    }
+    .family{
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .roomBOxDami{
+        font-weight: 150;
+        font-size: 10px;
+    }
+    .bookingText{
+        font-weight: 500;
+        font-size: 10px;
+    }
+ } 
+
+ @media (max-width: 475.98px) {
+    .roomRes{
+        flex-direction: row !important;
+    }
+    .roomSet{
+        width: 100% !important;
+    }
+    .roomSet img{
+        width: 100% !important;
+    }
+  }
+
+  @media (max-width: 575.98px) { 
+    .OurRoom{
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 50%;
+        font-weight: 700;
+        color: #f28e13;
+        margin-top: 50px;
+        }
+        .roomDami{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        }
+   }
+
+
+/* service section  */
+.serviceHead{
+font-weight: 400;
+font-size: 48px;
+line-height: 50%;
+letter-spacing: 0.03em;
+text-align: center;
+color: #0083ca;
+}
+.serDami{
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+text-align: center;
+color: #333;
+}
+.resturant{
+font-weight: 700;
+font-size: 22px;
+line-height: 109%;
+letter-spacing: 0.03em;
+color: #0083ca;
+}
+.restuDami{
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+color: #333;
+}
+
+
+/* gallary section  */
+.navTab{
+    /* color: #000 !important; */
+background-color: wheat;
+box-shadow: none;
+border: none;
+font-weight: 700 !important;
+font-size: 22px !important;
+line-height: 109% !important;
+letter-spacing: 0.03em;
+text-align: center;
+color: #333 !important;
+}
+.navTab:hover{
+    color: #000;
+    background-color: #cfd4d8;
+}
+
+/* people say  */
+.sayDami{
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #333;
+}
+.jane{
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #000;
+}
+.cooper{
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #474a57;
+}
+
+/* fooer section  */
+.hotelFooter{
+font-weight: 800;
+font-size: 22px;
+line-height: 109%;
+color: #f28e13;
+}
+.footerDami{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #d9dbe1;
+}
+
+.InpoEmail{
+color: wheat;
+border-radius: 5px;
+width: 230px;
+height: 40px;
+outline: none;
+background-color: rgba(196, 196, 196, 0.25);
+}
+.InpoEmail::placeholder{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: white;
+
+}
+.useFull{
+font-weight: 700;
+font-size: 22px;
+line-height: 109%;
+letter-spacing: 0.03em;
+color: #fff;
+}
+.linkFo{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #fff;
+}
+
+.emailFo{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #fff;
+}
+
+/* all room  */
+.aboutSec{
+    background-image:url(/src/assets/images/banner/banner2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about{
+font-weight: 700;
+font-size: 37px;
+line-height: 63%;
+letter-spacing: 0.03em;
+text-align: center !important;
+color: #3b5e8c;
+}
+
+.title{
+font-weight: 300;
+font-size: 16px;
+color: #fff;
+}
+
+/* service setion  */
+.serHead{
+font-weight: 500;
+font-size: 37px;
+color: #0083ca;
+text-align: justify;
+}
+
+.serDami{
+font-weight: 400;
+font-size: 16px;
+color: #747474;
+text-align: justify;
+cursor: pointer;
+}
+
+/* man  */
+.manBox{
+    width: 285px;
+   border-radius: 5px;
+   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+   background: linear-gradient(180deg, rgba(0, 131, 202, 0.2) 0%, rgba(0, 131, 202, 0.2) 100%);
+   }
+
+.possition{
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* booking section  */
+.famiRom{
+font-weight: 500;
+font-size: 37px;
+color: #0083ca;
+}
+
+.much{
+font-weight: 900;
+font-size: 22px;
+color: #fff;
+border-radius: 5px;
+width: 154px;
+height: 48px;
+background: #0083ca;
+display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead tr {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    border: 2px solid #F28E13;
+    text-align: left;
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Button Styling */
+.check-in-btn {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.check-in-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #F28E13;
+        padding: 10px;
+    }
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 100px;
+        flex-shrink: 0;
+    }
+}
+
+/* resturent item section  */
+.resItemHead{
+font-weight: 500;
+font-size: 22px;
+line-height: 109%;
+letter-spacing: 0.03em;
+text-align: start;
+color: #333;
+}
+
+.resItemDami{
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+color: #333;
+}
+
+
