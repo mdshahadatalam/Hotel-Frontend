@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navbar } from '../Component/Navbar'
 import { CgCalendarDates } from "react-icons/cg";
 import { LuSquareUser } from "react-icons/lu";
@@ -66,11 +66,33 @@ import people1 from '../assets/images/people/Ellipse 85.png'
 import people2 from '../assets/images/people/Ellipse 86.png'
 import people3 from '../assets/images/people/Ellipse 87.png'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 
 
 
 
 export const Home = () => {
+
+  const [subHead,setSubHead] =useState("")
+  const [head,setHead] =useState("")
+  const [title,setTittle] = useState("")
+  const [buttonText,setButtonText] =useState("")
+  const [showButton,setShowButton] =useState(false)
+
+
+  useEffect(()=>{
+    async function data(){
+      let data = await axios.get('http://localhost:3000/bannerItem')
+      console.log(data.data)
+      setSubHead(data.data.subHead)
+      setHead(data.data.head)
+      setTittle(data.data.tittle)
+      setButtonText(data.data.buttonText)
+      setShowButton(data.data.showButton)
+      
+    }
+    data()
+  },[])
 
   return (
    <>
@@ -82,12 +104,14 @@ export const Home = () => {
         <div className="row justify-content-center align-items-center h-100">
             <div className="col-lg-6 col-md-8 col-sm-10 text-center">
                 <div className='mt-5'>
-                    <h3 className='hotel py-4 text-left text-decoration-underline'>HOTEL</h3>
-                    <h4 className='upTo pt-4 text-left'>Up to 60% OFF</h4>
-                    <p className='ON pt-2 text-left'>On Hotel Booking Online</p>
+                    <h3 className='hotel py-4 text-left text-decoration-underline'>{subHead}</h3>
+                    <h4 className='upTo pt-4 text-left'>{head}</h4>
+                    <p className='ON pt-2 text-left'>{title}</p>
 
                     <div className='pt-4 text-left'>
-                        <Link to={'/booking'}> <button className='booking'>Booking Now</button></Link>
+                        {
+                          showButton === true ? <Link to={'/booking'}> <button className='booking'>{buttonText}</button></Link> : null
+                        }
                     </div>
                 </div>
             </div>
