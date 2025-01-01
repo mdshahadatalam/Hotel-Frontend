@@ -85,15 +85,21 @@ export const Navbar = ({setShow}) => {
                 
 
             <div className="flex">
+                 <a target='none' href="https://www.instagram.com/____md_shahadat_alam____?igsh=MXZleWQ2M3NjY3ZuYQ==">
                  <span onClick={handleShow} title='Instagram' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaInstagram />
                  </span>
+                 </a>
+                 <a target='none' href="https://www.facebook.com/mdshahadat.alam.35380">
                  <span onClick={handleShow} title='Facebook' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaFacebookF />
                  </span>
+                 </a>
+                 <a target='none' href="https://youtu.be/UJEUwEJ6gH4?si=2zfHZvXRp0BlIElA">
                  <span onClick={handleShow} title='Youtube' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaYoutube />
                  </span>
+                 </a>
                  <span onClick={handleShow} title='Twitter' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#f5f2f233]">
                        <FaTwitter />
                     </span>
