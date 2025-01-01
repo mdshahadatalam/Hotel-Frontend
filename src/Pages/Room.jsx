@@ -16,8 +16,25 @@ import { MdOutlineBedroomParent } from "react-icons/md";
 import { MdOutlineFitScreen } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 
 export const Room = () => {
+  
+   const [list,setList] = useState([])
+
+  useEffect(()=>{
+    async function data(){
+      let data = await axios.get('http://localhost:3000/roomItem')
+      console.log(data);
+      setList(data.data)
+    }
+    data()
+  },[])
+
+
+
   return (
 
     <>
@@ -278,6 +295,7 @@ export const Room = () => {
    
                </div>
              </div>
+
              <div className="col-lg-4 roomSet justify-center d-flex">
              <div className='roomBox my-3  transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg'>
                  <div className='d-flex justify-center position-relative roomImg cursor-pointer'>
@@ -311,6 +329,7 @@ export const Room = () => {
    
                </div>
              </div>
+
              <div className="col-lg-4 roomSet justify-center d-flex">
              <div className='roomBox my-3 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg'>
                  <div className='d-flex justify-center position-relative roomImg cursor-pointer'>
@@ -344,6 +363,44 @@ export const Room = () => {
    
                </div>
              </div>
+              
+              {
+                list.map((item)=>(
+                  <div className="col-lg-4 roomSet justify-center d-flex">
+             <div className='roomBox my-3 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg'>
+                 <div className='d-flex justify-center position-relative roomImg cursor-pointer'>
+                   <img className='img-fluid pt-2 ' src={`http://localhost:3000/${item.image}`} alt="image" />
+                     
+                   <div className=' roomIcon d-flex position-absolute text-white gap-x-36 top-64'>
+                        <div className='d-flex align-items-center'>
+                          <span className='text-xl'><MdOutlineBedroomParent /></span>
+                          <p className='m-0'>4Guest</p>
+                        </div>
+   
+                        <div className='d-flex align-items-center'>
+                          <span className='text-xl'><MdOutlineFitScreen /></span>
+                          <p className='m-0'>90Ft</p>
+                        </div>
+                   </div>
+                 </div>
+   
+                 <div>
+                   <div className='d-flex gap-x-20 justify-center py-2'>
+                     <h4 className='family'>{item.subHead}</h4>
+                     <span className='w-[70px] shadow-md h-[26px] bg-[#0083CA] rounded-sm text-white d-flex justify-center align-items-center'>{item.Price}</span>
+                   </div>
+                   <p className='px-2 roomBOxDami '>{item.head}t</p>
+   
+                    <div className='d-flex bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
+                    <p className='m-0 text-lg'>Booking </p> 
+                    <span className='pt-1 text-xl'><BsArrowRight /> </span>
+                    </div>
+                 </div>
+   
+               </div>
+             </div>
+                ))
+              }
    
            </div>
                 
