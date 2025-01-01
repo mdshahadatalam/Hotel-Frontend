@@ -65,7 +65,7 @@ import start2 from '../assets/images/start/Star 13.png'
 import people1 from '../assets/images/people/Ellipse 85.png'
 import people2 from '../assets/images/people/Ellipse 86.png'
 import people3 from '../assets/images/people/Ellipse 87.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 
@@ -78,6 +78,8 @@ export const Home = () => {
   const [title,setTittle] = useState("")
   const [buttonText,setButtonText] =useState("")
   const [showButton,setShowButton] =useState(false)
+
+  const navigate = useNavigate()
 
 
   useEffect(()=>{
@@ -93,6 +95,10 @@ export const Home = () => {
     }
     data()
   },[])
+
+  const handleNavigate = () => {
+    navigate('/booking')
+  }
 
   return (
    <>
@@ -127,25 +133,25 @@ export const Home = () => {
         <div className="container py-10 cheek position-absolute left-0 right-0 top-[-60px]">
         <div className="row justify-content-center">
     <div className="col-lg-2 col-md-4 col-sm-6">
-        <div className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
+        <div onClick={handleNavigate} className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
             <div><p className='m-0 text-[#747474]'>Check in</p></div>
             <div><span className='text-[#F28E13] text-xl'><CgCalendarDates /></span></div>
         </div>
     </div>
     <div className="col-lg-2 col-md-4 col-sm-6">
-        <div className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
+        <div onClick={handleNavigate} className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
             <div><p className='m-0 text-[#747474]'>Check out</p></div>
             <div><span className='text-[#F28E13] text-xl'><CgCalendarDates /></span></div>
         </div>
     </div>
     <div className="col-lg-2 col-md-4 col-sm-6">
-        <div className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
+        <div onClick={handleNavigate} className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
             <div><p className='m-0 text-[#747474]'>Adults</p></div>
             <div><span className='text-[#F28E13] text-xl'><LuSquareUser  /></span></div>
         </div>
     </div>
     <div className="col-lg-2 col-md-4 col-sm-6">
-        <div className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
+        <div onClick={handleNavigate} className='cheekBox d-flex justify-content-between align-items-center px-2 mt-2 cursor-pointer'>
             <div><p className='m-0 text-[#747474]'>Children</p></div>
             <div><span className='text-[#F28E13] text-xl'><FaChildren /></span></div>
         </div>
