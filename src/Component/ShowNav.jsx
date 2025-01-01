@@ -29,7 +29,7 @@ export const ShowNav = ({setShow}) => {
    
   return (
     <>
-     <div className="container p-0 ">
+     <div className="container p-2 ">
      <nav className="flex items-center justify-between w-full relative">
             {/* <img src="https://i.ibb.co/0BZfPq6/darklogo.png" alt="logo" className="w-[60px] "/> */}
 
@@ -63,18 +63,27 @@ export const ShowNav = ({setShow}) => {
                 
 
             <div className="flex">
+                 <a target='none'  href="https://www.instagram.com/____md_shahadat_alam____?igsh=MXZleWQ2M3NjY3ZuYQ==">
                  <span onClick={handleShow} title='Instagram' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaInstagram />
                  </span>
+                 </a>
+                 <a target='none' href="https://www.facebook.com/mdshahadat.alam.35380">
                  <span onClick={handleShow} title='Facebook' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaFacebookF />
                  </span>
-                 <span onClick={handleShow} title='Youtube' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
+                 </a>
+                <a target='none' href="https://youtu.be/UJEUwEJ6gH4?si=COgSNP-QwQK4jOJG">
+                <span onClick={handleShow} title='Youtube' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#ffffff33]">
                        <FaYoutube />
                  </span>
+                </a>
+                 
+                 
                  <span onClick={handleShow} title='Twitter' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#f5f2f233]">
                        <FaTwitter />
                     </span>
+              
 
                      <Link to={'/rejistration'}>  <span  title='Sign in' className="mx-2 w-[32px] cursor-pointer hover:shadow-lg h-[32px] rounded-full text-lg bg-[#ffffff33] p-1 flex justify-center items-center text-[#ffff] transition-transform duration-300 hover:scale-110 hover:bg-[#f5f2f233]"><FaRegUserCircle /></span></Link> 
                     
