@@ -12,8 +12,24 @@ import { RiDrinks2Fill } from "react-icons/ri";
 import { PiVideoConference } from "react-icons/pi";
 import { IoGameControllerSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from 'axios'
+import { useState } from 'react';
 
 export const Service = () => {
+
+   const [list, setList] = useState([])
+
+
+  useEffect(()=>{
+    async function data(){
+      let data = await axios.get('http://localhost:3000/serviceItem')
+      console.log(data.data)
+      setList(data.data)
+      
+    }
+    data()
+  },[])
   return (
    <>
    <section className='aboutSec h-[300px] '>
@@ -60,6 +76,26 @@ export const Service = () => {
               <img className='img-fluid shadow-md rounded-md  transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer' src={service2} alt="" />
             </div>
           </div>
+
+        {
+          list.map((item)=>(
+            <div className="row justify-center align-items-center pt-5">
+            <div className="col-lg-6">
+              <h3 className='serHead'>{item.subHead}</h3>
+              <p className='serDami'> {item.paragraph} 
+              </p>
+
+
+              
+            </div>
+
+            <div className="col-lg-6">
+              <img className='img-fluid shadow-md rounded-md  transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer' src={`http://localhost:3000/${item.serImg}`} alt="image" />
+            </div>
+          </div>
+          ))
+        }
+          
           
         </div>
       </section>
