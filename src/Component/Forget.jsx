@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { toast, ToastContainer } from 'react-toastify';
 import { SyncLoader } from 'react-spinners';
+import { useNavigate } from 'react-router-dom';
 export const Forget = () => {
     const auth = getAuth();
     const [email,setEmail] = useState("")
     const [loader,setLoader] = useState(false)
+    const navigate = useNavigate()
     
     const handleEmail =(e)=>{
         setEmail(e.target.value)
@@ -17,6 +19,11 @@ export const Forget = () => {
         setLoader(true)
         sendPasswordResetEmail(auth, email)
         .then(() => {
+
+             setTimeout(()=>{
+                navigate('/login')
+             },2000)
+
             setLoader(false)
           console.log("reset");
           setEmail('')
