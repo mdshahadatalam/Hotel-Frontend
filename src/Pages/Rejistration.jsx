@@ -7,6 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import { Navbar } from '../Component/Navbar';
 import { ShowNav } from '../Component/ShowNav';
 import { PropagateLoader } from 'react-spinners';
+import { Google } from '../Component/Google';
 
 export const Rejistration = () => {
   const auth = getAuth();
@@ -132,6 +133,8 @@ export const Rejistration = () => {
       </button>
 
     <p className='py-2'>You have a account? <Link className='no-underline hover:underline' to={'/login'}>Sign In</Link> </p>
+
+    <Google/>
 </form>
     </div>
    </section>
