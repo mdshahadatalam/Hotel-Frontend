@@ -151,6 +151,8 @@ export const Login = () => {
             loader ? <PropagateLoader size={5} color='white' /> : "Sign in"
           }
           </button>
+
+          <Link to={'/forget'} className='no-underline text-black'> <p className='m-0 hover:underline font-serif tracking-wide hover:text-blue-500 cursor-pointer pt-2'>Forget password?</p></Link>
     
         <p className='py-2'>Don't have a account? <Link className='no-underline hover:underline' to={'/rejistration'}>Sign up</Link> </p>
     </form>

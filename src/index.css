@@ -81,12 +81,14 @@ button:hover {
     /* color: whitesmoke; */
     position: absolute;
     right: 0;
+    transform: rotate(180deg);
+    transition: 0.3s;
 }
 
 .crossIcon:hover{
     background-color: #d5d2d2;
-    rotate: 30deg;
-    transition: 7ms;
+    transform: rotate(360deg);
+    
 }
 
 /* home section  */

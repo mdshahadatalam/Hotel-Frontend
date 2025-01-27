@@ -22,6 +22,7 @@ import { Pool } from './Pages/Pool';
 import { MiniBar } from './Pages/MiniBar';
 import { Conference } from './Pages/Conference';
 import { Game } from './Pages/Game';
+import { Forget } from './Component/Forget';
 
 
 
@@ -57,6 +58,7 @@ function App() {
        <Route element={<LoggedOutUser/>}>
        <Route path='/rejistration' element={<Rejistration/>}></Route>
        <Route path='/login' element={ <Login/> }></Route>
+       <Route path='/forget' element={ <Forget/> }></Route>
        </Route>
 
     </Route>
