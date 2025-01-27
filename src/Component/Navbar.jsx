@@ -14,6 +14,7 @@ import { IoMdLogOut } from "react-icons/io";
 import { getAuth, signOut } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { loggedOutUser } from '../Fueature/Slice/Login';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 export const Navbar = ({setShow}) => {
@@ -33,6 +34,7 @@ export const Navbar = ({setShow}) => {
             navigate('/')
             localStorage.removeItem('user')
             dispatch(loggedOutUser());
+             
         }).catch(()=>{
             console.log("error")
         })
@@ -160,7 +162,7 @@ export const Navbar = ({setShow}) => {
       </div>
    </div>
      }
-     
+     <ToastContainer/>
     </>
   )
 }
