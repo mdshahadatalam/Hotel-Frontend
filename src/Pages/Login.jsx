@@ -30,12 +30,10 @@ export const Login = () => {
   const [loader,setLoader] = useState(false)
 
   const handleClose =()=>{
-    setShow(false)
+    navigate('/')
   }
 
-  const handleShow =()=>{
-    setShow(true)
-  }
+ 
    
 
   
@@ -68,7 +66,7 @@ export const Login = () => {
       dispatch(loggedInUser(user))
                 
       localStorage.setItem("user",JSON.stringify(user))
-      navigate('/')
+      navigate('/booking')
      }else{
        toast.error('Your email is not verified', {
               position: "top-right",
@@ -163,7 +161,7 @@ export const Login = () => {
       </div>
        </section>
 
-       <section className='py-5'>
+       {/* <section className='py-5'>
              <div className="container">
                <div className='text-center'>
                <h3 className='OurRoom py-4'>  <span className='text-blue-700'>Our</span> Room </h3>
@@ -283,7 +281,7 @@ export const Login = () => {
                      
                    </div>
              </div>
-           </section>
+           </section> */}
        
 
        <ToastContainer/>

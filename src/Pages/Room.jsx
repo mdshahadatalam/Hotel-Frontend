@@ -15,7 +15,7 @@ import room10 from '../assets/images/room/room (10).png'
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { MdOutlineFitScreen } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
@@ -23,6 +23,7 @@ import { useState } from 'react'
 export const Room = () => {
   
    const [list,setList] = useState([])
+   const navigate = useNavigate()
 
   useEffect(()=>{
     async function data(){
@@ -33,6 +34,9 @@ export const Room = () => {
     data()
   },[])
 
+  const handleNavigate =()=>{
+    navigate('/booking')
+  }
 
 
   return (
@@ -79,7 +83,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -112,7 +116,7 @@ export const Room = () => {
                    <p className='px-2  roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -145,7 +149,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -183,7 +187,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -216,7 +220,7 @@ export const Room = () => {
                    <p className='px-2  roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -249,7 +253,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -288,7 +292,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -322,7 +326,7 @@ export const Room = () => {
                    <p className='px-2  roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex  bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>
@@ -356,7 +360,7 @@ export const Room = () => {
                    <p className='px-2 roomBOxDami '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo et</p>
    
                     <div className='d-flex bookingText justify-end align-items-center px-3 py-2 text-[#F28E13] cursor-pointer'>
-                    <p className='m-0 text-lg'>Booking </p> 
+                    <p onClick={handleNavigate} className='m-0 text-lg'>Booking </p> 
                     <span className='pt-1 text-xl'><BsArrowRight /> </span>
                     </div>
                  </div>

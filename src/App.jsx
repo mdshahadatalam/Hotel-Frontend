@@ -32,16 +32,19 @@ function App() {
 
       
 
-      <Route path='/rejistration' element={<Rejistration/>}></Route>
-      <Route path='/login' element={ <Login/> }></Route>
+      {/* <Route path='/rejistration' element={<Rejistration/>}></Route> */}
+      {/* <Route path='/login' element={ <Login/> }></Route> */}
 
       <Route element={<LoggedInUser/>}>
+      <Route path="/booking" element={<Booking />}></Route>
+      </Route>
+
       <Route element={<RootLayout/>}>
       <Route path="/" element={<Home />} ></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/room" element={<Room />}></Route>
       <Route path="/service" element={<Service />}></Route>
-      <Route path="/booking" element={<Booking />}></Route>
+     
       <Route path="/resturent" element={<Resturant />}></Route>
       <Route path="/transport" element={<Transport />}></Route>
       <Route path="/spa" element={<Spa />}></Route>
@@ -53,13 +56,15 @@ function App() {
 
       </Route>
    
-       </Route>
+       
 
        <Route element={<LoggedOutUser/>}>
+       </Route>
+       
        <Route path='/rejistration' element={<Rejistration/>}></Route>
        <Route path='/login' element={ <Login/> }></Route>
        <Route path='/forget' element={ <Forget/> }></Route>
-       </Route>
+       
 
     </Route>
    ))

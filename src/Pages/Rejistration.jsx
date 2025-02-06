@@ -8,6 +8,7 @@ import { Navbar } from '../Component/Navbar';
 import { ShowNav } from '../Component/ShowNav';
 import { PropagateLoader } from 'react-spinners';
 import { Google } from '../Component/Google';
+import { RxCross2 } from 'react-icons/rx';
 
 export const Rejistration = () => {
   const auth = getAuth();
@@ -76,6 +77,11 @@ export const Rejistration = () => {
     
   });
     }
+
+
+    const handleClose =()=>{
+      navigate('/')
+    }
     
   return (
   <>
@@ -83,6 +89,10 @@ export const Rejistration = () => {
      <ShowNav/>
     <div className='formSec'>
     <form  onSubmit={formik.handleSubmit} className='formSection font-serif' action="/submit_registration" method="POST">
+
+              <div className='position-relative'>
+                <span onClick={handleClose} className='crossIcon cursor-pointer'><RxCross2 /></span>
+                </div>
     <h2>Sign up</h2>
     <div class="form-control shadow-mdshadow-md">
         <label for="name">Name</label>

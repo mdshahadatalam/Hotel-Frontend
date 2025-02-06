@@ -37,21 +37,21 @@ export const ShowNav = ({setShow}) => {
                              />
             <ul className="items-center gap-[20px] text-[1rem] text-[#424242] lg:flex hidden pt-3">
 
-                <Link className='no-underline' to={'/rejistration'}>
+                <Link className='no-underline' to={'/'}>
                 <li className="hover:border-b-[#3B9DF8] text-white tracking-wide text-xl mx-2  border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize">home</li>
                 </Link>
 
-                <Link className='no-underline' to={'/rejistration'}>
+                <Link className='no-underline' to={'/room'}>
                 <li  className="hover:border-b-[#3B9DF8] text-white tracking-wide text-xl mx-2  border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize">Rooms & Sultes 
                     us
                 </li>
                 </Link>
 
-                <Link className='no-underline' to={'/rejistration'}>
+                <Link className='no-underline' to={'/service'}>
                 <li o className="hover:border-b-[#3B9DF8] text-white tracking-wide text-xl mx-2  border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize">Services</li>
                 </Link>
 
-                <Link className='no-underline' to={'/rejistration'}>
+                <Link className='no-underline' to={'/about'}>
                 <li  className="hover:border-b-[#3B9DF8] text-white tracking-wide text-xl mx-2  border-b-[2px] border-transparent transition-all duration-500 cursor-pointer hover:text-[#3B9DF8] capitalize">About US </li>
                 </Link>
                 <Link className='no-underline' to={'/rejistration'}>
