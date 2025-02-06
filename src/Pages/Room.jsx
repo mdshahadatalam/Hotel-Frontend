@@ -27,7 +27,7 @@ export const Room = () => {
 
   useEffect(()=>{
     async function data(){
-      let data = await axios.get('http://localhost:3000/roomItem')
+      let data = await axios.get('https://hotel-booking-delta-henna.vercel.app/roomItem')
       console.log(data);
       setList(data.data)
     }
