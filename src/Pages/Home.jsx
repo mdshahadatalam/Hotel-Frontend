@@ -84,7 +84,7 @@ export const Home = () => {
 
   useEffect(()=>{
     async function data(){
-      let data = await axios.get('https://hotel-booking-delta-henna.vercel.app/bannerItem')
+      let data = await axios.get('https://hotel-backend-git-main-md-shahadat-alams-projects.vercel.app/bannerItem')
       console.log(data.data)
       setSubHead(data.data.subHead)
       setHead(data.data.head)
